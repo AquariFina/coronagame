@@ -1,0 +1,357 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, sub, var,
+dl, dd, dt, ul, ol, li,
+fieldset, form, table, caption, tbody,
+tfoot, thead, tr, th, td, header, section,
+footer, article, details {
+padding: 0; margin: 0; border: 0; outline: 0;
+font-family: inherit; font-style: inherit; font-size:
+100%; font-weight: inherit; vertical-align: baseline;
+}
+
+@font-face{
+  font-family:"noot";
+  src: url(adler.ttf);
+}
+@font-face{
+  font-family:"rad";
+  src: url(rad.otf);
+}
+@font-face{
+  font-family:"robo";
+  src:url(robo.ttf);
+}
+@font-face{
+  font-family:"shlop";
+  src:url(shlop.ttf);
+}
+
+body{
+  font-family:shlop, sans-serif;
+  background-color: black;
+}
+
+#run{
+  position:fixed;
+  top: 10px;
+  left:20px;
+  height: 90px;
+  width: 90px;
+  z-index: 3;
+}
+
+#spin{
+  position:fixed;
+  top: 150px;
+  left:120px;
+  height: 85px;
+  width: 85px;
+  z-index: 3;
+  
+}
+
+#menubar{
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100vh;
+  width:260px;
+  background-color: black;
+  opacity:90%;
+  z-index:2;
+}
+
+#menu{
+  position:fixed;
+  font-size:30pt;
+  top:280px;
+  left:40px;
+  height:10vh;
+  width:1vw;
+  z-index: 3;
+}
+
+#question{
+  position:fixed;
+  top:830px;
+  left:810px;
+  z-index:3;
+  text-align: center;
+  font-size:20px;
+}
+
+#background{
+  position:relative;
+  width:100%;
+  height:90vh;
+}
+
+#topleft{
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:150px;
+  width:260px;
+  background-color: lime;
+  z-index:5;
+}
+
+#name{ 
+  position:fixed;
+  font-size:40px;
+  top:27px;
+  left:115px;
+  z-index: 4;
+  justify-content: center;
+  color:black;
+}
+
+#videobox{
+  position:fixed;
+  top:30px;
+  left:375px;
+  height:540px;
+  width:960px;
+  z-index: 6;
+  background-color: black;
+  opacity:100%;
+}
+#viewvideo{
+  position:fixed;
+  top:30px;
+  left:375px;
+  height:540px;
+  width:960px;
+  z-index: 7;
+  background-color: black;
+  opacity:100%;
+}
+
+#downloadhost{
+  position:fixed;
+  top:600px;
+  left:375px;
+  height:230px;
+  width:920px;
+  background-color: white;
+  opacity:100%;
+  padding:20px;
+  text-align:center;
+  text-transform: capitalize;
+  font-size:20pt;
+  z-index:4;
+}
+
+#bounding{
+  position:fixed;
+  top:625px;
+  left:375px;
+  height:150px;
+  width:920px;
+  color:white;
+  border-style: solid;
+  z-index:4;
+}
+
+#windows{
+  position:fixed;
+  top:665px;
+  left:540px;
+  z-index: 3;
+  opacity: 80%;
+  text-align: center;
+  font-size:20px;
+}
+
+#mac{
+  position:fixed;
+  top:665px;
+  left:800px;
+  z-index: 3;
+  opacity: 80%;
+  text-align: center;
+  font-size:20px;
+}
+
+#linux{
+  position:fixed;
+  top:665px;
+  left:1050px;
+  z-index: 3;
+  opacity: 80%;
+  text-align: center;
+  font-size:20px;
+}
+
+#desc{
+  position:fixed;
+  font-size:15pt;
+  top:30px;
+  left:375px;
+  height:750px;
+  width:920px;
+  text-align:left;
+  background-color:white;
+  opacity: 90%;
+  padding:20px;
+  font-family:robo;
+  line-height:1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media(max-width:1200px){
+  #run{
+    height:20px;
+    width:40px;
+    top:105px;
+    left:15px;
+    margin:6px;
+    padding-top:0;
+  }
+  #spin{
+    height:20px;
+    width:40px;
+    top:105px;
+    left:55px;
+    margin:6px;
+    padding-top:0;
+  }
+  #menu{
+    font-size:15pt;
+    height:30px;
+    width:75%;
+    top: 160px;
+    left:20px;
+    margin:6px;
+  }
+  #menubar{
+    height:100vh;
+    width:125px;
+    top:0px;
+    left:0px;
+  }
+  #topleft{
+    height:100px;
+    width:125px;
+    top:0px;
+    left:0px;
+  }
+  #name{
+    top:20px;
+    left:17px;
+    font-size:16pt;
+    margin:6px;
+  }
+  #question{
+    top:400px;
+    left:17px;
+    font-size:10px;
+    margin:6px;
+  }
+  #boundingbox{
+    top:20px;
+    left:150px;
+    margin:6px;
+  }
+  #desc{
+    top:20px;
+    left:150px;
+    margin:6px;
+    font-size:12pt;
+  }
+}
+
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  0% {transform:rotateY(0deg);}
+  25% {transform:rotateY(90deg);}
+  50% {transform:rotateY(180deg);}
+  100% {transform: rotateY(360deg);}
+}
+
+
+
+/*
+  img{
+      animation-name:rotate;
+      animation-duration: 4s;
+      animation-iteration-count:infinite;
+      animation-timing-function: linear;
+  }
+
+  @keyframes rotate {
+    0% {transform:rotateY(0deg);}
+    25% {transform:rotateY(20deg);}
+    50% {transform:rotateY(180deg);}
+    100% {transform: rotateY(360deg);}
+  }
+*/
+
+
+a{
+  text-decoration:none;
+  color: #ff85a3;
+}
+
+#name a:link, 
+#name a:visited, 
+#name a:hover { 
+ color:black; 
+ text-decoration: none; 
+} 
+
+#windows a:link,
+#windows a:visited,
+#windows a:hover{
+  color:red;
+}
+#mac a:link,
+#mac a:visited,
+#mac a:hover{
+  color:red;
+}
+#linux a:link,
+#linux a:visited,
+#linux a:hover{
+  color:red;
+}
+
+#question a:link,
+#question a:visited,
+#question a:hover{
+  color:black;
+}
+
+#play a:visited{
+  background-color:red;
+}
+
+
+/*
+#about a:link,
+#about a:visited{
+  color:purple;
+}
+*/
+
+a:hover{
+  color: cyan;
+}
+
+a:active{
+  color:lightgreen;
+}
+
+p{
+  color:black;
+}
